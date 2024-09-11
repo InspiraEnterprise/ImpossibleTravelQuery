@@ -26,5 +26,32 @@ Impossible Travel Kusto Query Language (KQL) script is designed to analyze sign-
 
 •	Determine appropriate threshold values for travel distance (in kilometers) and timeframe (in hours) based on the organization’s risk tolerance and normal user behavior.
 
+# MITRE ATT&CK
+
+The following are the MITRE ATT&CK tactics and techniques associated with the analytical rule:
+
+Initial Access
+
+•	T1078 - Valid Accounts
+
+If an account is used from multiple geographically distant locations in a short period, it may indicate that an adversary has obtained valid credentials and is using them from a different location.
+
+Command and Control 
+
+•	T1071 - Application Layer Protocol
+
+Adversaries might use remote access tools that leverage common application layer protocols to hide their activities, which could be indicated by logins from unusual locations.
+
+Defense Evasion 
+
+•	T1036 – Masquerading
+
+An adversary might use techniques to make their activity appear normal, such as using VPNs or proxies to mimic legitimate user access patterns, which could involve impossible travel scenarios.
+
+# Query Scheduling
+•	Query Frequency: - Run query every 6 hours 
+
+•	Query Lookup data: - Lookup data from the last 24 hours.
+
 
 
